@@ -92,6 +92,14 @@ function Chats:isEnemy()
     end
 end
 
+function Chats:string()
+    return self.name .. ": " .. self.text;
+end
+
+function Chats:print()
+    print(self:string());
+end
+
 function Rect(x, y, w, h)
     if (x == nil or type(x) ~= "number") then x = 0; end
     if (y == nil or type(y) ~= "number") then y = 0; end
